@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="setIntial()">
+    <div class="description-page" id="despage">
+        <div class="page-content">
+            <div class="page-title">
+                <h1>Technical Quizz</h1>
+            </div>
+            <div class="info-c1">
+                <p> Put your knowledge about all things technology to the test with our 15 question quiz and have some
+                    nerdy fun in the process. </p>
+                <p> Because everything tech, from computers and the internet to software and big data, changes rapidly
+                    on a day-to-day basis, it’s now a must to stay up to date with the technology that dominates our
+                    modern day lives. </p>
+                <p> Are you up to speed on what’s going on in the tech industry today? </p>
+                <p> Take our quiz to find out. Test how much you know about technology and learn a thing or two about
+                    the tech topics that will reshape our future – for better or worse. </p>
+            </div>
+            <div class="btn-c1">
+                <button id="g-st">get started</button>
+            </div>
+        </div>
+    </div>
+    <!-- <button id="myBtn">click me</button> -->
+    <div class="user-page" id="userpage">
+        <div class="page-content-c1">
+            <div class="page-title">
+                <h1>Register</h1>
+            </div>
+            <hr>
+            <div class="form-page">
+                <form>
+                    <div class="form-control">
+                        <label for="name">
+                            Full Name
+                        </label>
+                        <input required type="text" autocomplete="off" class="txtip" id="fname">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">
+                            Email
+                        </label>
+                        <input required class="txtip" autocomplete="off" type="email" id="email">
+                    </div>
+                    <div class="form-control">
+                        <label class="gxg" for="gender">
+                            Gender
+                        </label>
+                        <label class="gxg-co1">
+                            <input type="radio" value="male" name="gender">Male
+                        </label>
+                        <label class="gxg-co1">
+                            <input type="radio" value="female" name="gender">Female
+                        </label>
+                        <label class="gxg-co1">
+                            <input type="radio" value="other" name="gender">Other
+                        </label>
+                    </div>
+                    <div class="form-control">
+                        <label>
+                            Favourite Language
+                        </label>
+                        <select required class="txtip0" name="fav-lag" id="favLag">
+                            <option value="">select one</option>
+                            <option value="Angular">Angular</option>
+                            <option value="Vue">Vue</option>
+                            <option value="React">React</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <button id="btn-submit" type="submit">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Questions -->
+    <div class="card-c1">
+        <div class="card-detail">
+            <div class="contro">
+                <div class="back">
+                    <button id="bQ" class="btn-bk">
+                    </button>
+                </div>
+                <div class="forward">
+                    <button id="fQ" class="btn-fw">
+                    </button>
+                </div>
+            </div>
+            <div class="que">
+                <p id="qnum"></p>
+                <p id="questions"></p>
+            </div>
+            <div class="options">
+                <div>
+                    <p><input type="radio" id="A-option" name="quizz"> <span id="A-option-value"> </span></p>
+                </div>
+                <div>
+                    <p><input type="radio" id="B-option" name="quizz"> <span id="B-option-value"> </span></p>
+                </div>
+                <div>
+                    <p><input type="radio" id="C-option" name="quizz"> <span id="C-option-value"> </span></p>
+                </div>
+                <div>
+                    <p><input type="radio" id="D-option" name="quizz"> <span id="D-option-value"> </span></p>               
+                </div> 
+            </div>
+            <div class="btn-submit">
+                <button class="btn-save">Save</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./main.js"></script>
+
+</html>
