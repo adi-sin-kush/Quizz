@@ -16,6 +16,9 @@ const fQues = document.getElementById('fQ');
 
 bQues.disabled = true;
 fQues.disabled = true;
+bQues.style.cursor = 'not-allowed';
+fQues.style.cursor = 'not-allowed';
+
 
 const A_option = document.getElementById('A-option');
 const B_option = document.getElementById('B-option');
@@ -32,6 +35,7 @@ const q_radio_value = document.getElementsByName('quizz');
 const save_btn = document.getElementById('btn-save');
 
 save_btn.disabled = true;
+save_btn.style.cursor = 'not-allowed';
 
 // console.log(q_radio_value);
 
@@ -120,25 +124,34 @@ const finalAnsArr = [
 
 q_radio_value.forEach(i => {
     i.addEventListener('click', e => {
-        console.log('clicked');
+        // console.log('clicked');
         save_btn.disabled = false;
         bQues.disabled = false;
         fQues.disabled = false;
+
+        save_btn.style.cursor = 'pointer';
+        bQues.style.cursor = 'pointer';
+        fQues.style.cursor = 'pointer';
     });
 });
 
 save_btn.addEventListener('click', e => {
-    console.log('save btn clicked');
+    // console.log('save btn clicked');
+    for(let i = 0 ; i < q_radio_value.length ; i++){
+        if(q_radio_value[i].checked)
+        {
+            console.log(q_radio_value[i].value);
+        }
+    }
 });
 
 
 bQues.addEventListener('click', e => {
     
-
-    // if(qnumber != 0){
-    //     qnumber--;
-        
-    // }
+    if(qnumber != 0){
+        qnumber--;
+         
+    }
 
 });
 
@@ -164,15 +177,12 @@ function setIntial() {
 
 fQues.addEventListener('click', e => {
     // console.log(questionArr.length);
-    
     for(let i = 0 ; i < q_radio_value.length ; i++){
         if(q_radio_value[i].checked)
         {
-            console.log(q_radio_value[i].value);
             q_radio_value[i].checked = false;
         }
     }
-
     if(qnumber < questionArr.length-1){
         qnumber++;
         // console.log(qnumber);
@@ -192,6 +202,15 @@ fQues.addEventListener('click', e => {
         B_option_value.innerText = answerArr[qnumber][1];
         C_option_value.innerText = answerArr[qnumber][2];
         D_option_value.innerText = answerArr[qnumber][3];        
+
+        save_btn.disabled = true;
+        bQues.disabled = true;
+        fQues.disabled = true;
+
+        save_btn.style.cursor = 'not-allowed';
+        bQues.style.cursor = 'not-allowed';
+        fQues.style.cursor = 'not-allowed';
+
 
     }
 
