@@ -7,7 +7,7 @@
 }
 
 .description-page{
-    display: none; //------------
+    // display: none; //------------
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -93,12 +93,12 @@ button{
     height: 100%;
     overflow: auto;
     background: rgba(0,0,0,0.1);
-    padding: 50px 0px 60px 0px;
+    // padding: 10px 0px 0px 0px;
 
     .form-page{
         // background: lightgreen;
         padding: 12px;
-        height: 350px;
+        height: 450px;
         margin-top: 7px;
 
         form{
@@ -163,12 +163,16 @@ hr{
     margin-top: 7px;
 }
 
+input:focus{
+    outline: none;
+}
 
 // Questions - card view
 
 
 .card-c1{
-    display: flex;
+    // display: flex;
+    display: none;
     height: 100vh;
     justify-content: center;
     align-items: center;
@@ -228,12 +232,67 @@ span{
     margin-left: 12px;
 }
 
+.btn-submit{
+    align-self: flex-end;
+}
+
 .btn-save{
-    width: 100px;
+    width: 80px;
+    padding: 10;
     margin-top: 12px;
 }
 
+#btn-submit-test{
+    background: red;
+}
 
+// result-card view
 
+.result-c1{
+    display: none;
+}
 
+.result-div{
+    display: flex;
+    padding: 12px;
+    height: 100vh;
+    justify-content: center;
+    align-self: center;
+}
 
+.result-user{
+    
+    width: 600px;
+    border: 1px solid black;
+    padding: 12px;
+    height: 300px;
+    align-self: center;
+
+    .marks-result{
+        margin-top: 40px;
+
+        .title-result{
+            p{
+                font-family: 'Muli', sans-serif;
+            }
+        }
+
+        label
+        {
+            font-weight: 600;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        p{
+            margin-top: 4px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.err{
+    margin-left: 0;
+    margin-top: 10px;
+    color: red;
+    display: none;
+}

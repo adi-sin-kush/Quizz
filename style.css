@@ -7,7 +7,6 @@
 }
 
 .description-page {
-  display: none;
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -106,12 +105,11 @@ button {
   height: 100%;
   overflow: auto;
   background: rgba(0, 0, 0, 0.1);
-  padding: 50px 0px 60px 0px;
 }
 
 .user-page .form-page {
   padding: 12px;
-  height: 350px;
+  height: 450px;
   margin-top: 7px;
 }
 
@@ -180,10 +178,12 @@ hr {
   margin-top: 7px;
 }
 
+input:focus {
+  outline: none;
+}
+
 .card-c1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   height: 100vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -260,8 +260,70 @@ span {
   margin-left: 12px;
 }
 
+.btn-submit {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 .btn-save {
-  width: 100px;
+  width: 80px;
+  padding: 10;
   margin-top: 12px;
+}
+
+#btn-submit-test {
+  background: red;
+}
+
+.result-c1 {
+  display: none;
+}
+
+.result-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.result-user {
+  width: 600px;
+  border: 1px solid black;
+  padding: 12px;
+  height: 300px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.result-user .marks-result {
+  margin-top: 40px;
+}
+
+.result-user .marks-result .title-result p {
+  font-family: 'Muli', sans-serif;
+}
+
+.result-user .marks-result label {
+  font-weight: 600;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.result-user .marks-result p {
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.err {
+  margin-left: 0;
+  margin-top: 10px;
+  color: red;
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

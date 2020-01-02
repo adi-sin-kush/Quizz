@@ -44,12 +44,18 @@
                             Full Name
                         </label>
                         <input required type="text" autocomplete="off" class="txtip" id="fname">
+                        <span id="err-name" class="err">
+                            *Please Enter your name
+                        </span>
                     </div>
                     <div class="form-control">
                         <label for="email">
                             Email
                         </label>
                         <input required class="txtip" autocomplete="off" type="email" id="email">
+                        <span id="err-email" class="err">
+                            *Please Enter your email
+                        </span>
                     </div>
                     <div class="form-control">
                         <label class="gxg" for="gender">
@@ -64,6 +70,9 @@
                         <label class="gxg-co1">
                             <input type="radio" value="other" name="gender">Other
                         </label>
+                        <span id="err-gender" class="err">
+                            *Please select one of the above
+                        </span>
                     </div>
                     <div class="form-control">
                         <label>
@@ -75,6 +84,10 @@
                             <option value="Vue">Vue</option>
                             <option value="React">React</option>
                         </select>
+                        <span id="err-fav" class="err">
+                            *Please select one of the above
+                        </span>
+
                     </div>
                     <div class="form-control">
                         <button id="btn-submit" type="submit">submit</button>
@@ -84,7 +97,7 @@
         </div>
     </div>
     <!-- Questions -->
-    <div class="card-c1">
+    <div id="cardry" class="card-c1">
         <div class="card-detail">
             <div class="contro">
                 <div class="back">
@@ -111,11 +124,31 @@
                     <p><input type="radio" id="C-option" name="quizz"> <span id="C-option-value"> </span></p>
                 </div>
                 <div>
-                    <p><input type="radio" id="D-option" name="quizz"> <span id="D-option-value"> </span></p>               
-                </div> 
+                    <p><input type="radio" id="D-option" name="quizz"> <span id="D-option-value"> </span></p>
+                </div>
             </div>
             <div class="btn-submit">
                 <button id="btn-save" class="btn-save">Save</button>
+                <button id="btn-submit-test" class="btn-save">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- result -->
+    <div id="result-c1" class="result-c1">
+        <div class="result-div">
+            <div class="result-user">
+                <div class="title-result">
+                    <p>Completed Quizz</p>
+                </div>
+                <div class="marks-result">
+                    <label>Name</label>
+                    <p id="username" class="username">Aditya</p>
+                    <label>No of Questions</label>
+                    <p id="noofq" class="noofq">15</p>
+                    <label>Score</label>
+                    <p id="score" class="score">12</p>
+                </div>
             </div>
         </div>
     </div>
