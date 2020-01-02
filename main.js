@@ -210,7 +210,6 @@ q_radio_value.forEach(i => {
 });
 
 
-
 save_btn.addEventListener('click', e => {
     for (let i = 0; i < q_radio_value.length; i++) {
         if (q_radio_value[i].checked) {
