@@ -14,6 +14,9 @@ const questionNo = document.getElementById('qnum');
 const bQues = document.getElementById('bQ');
 const fQues = document.getElementById('fQ');
 
+bQues.disabled = true;
+fQues.disabled = true;
+
 const A_option = document.getElementById('A-option');
 const B_option = document.getElementById('B-option');
 const C_option = document.getElementById('C-option');
@@ -26,7 +29,11 @@ const D_option_value = document.getElementById('D-option-value');
 
 const q_radio_value = document.getElementsByName('quizz');
 
-console.log(q_radio_value);
+const save_btn = document.getElementById('btn-save');
+
+save_btn.disabled = true;
+
+// console.log(q_radio_value);
 
 let genderValue = '';
 let favLagValue = '';
@@ -109,6 +116,21 @@ const answerArr = [
 const finalAnsArr = [
     'smile','BlockChain','Crop','Because it may be analyzed to reveal patterns and trends','Zero-day exploit','ZIP','Free and Open-Source Software','VoIP','Word wrapping','Organize cloud storage','Java','2.7 zetabytes','Machine learning','Digitizing','Able2Extract Professional'
 ]
+
+
+q_radio_value.forEach(i => {
+    i.addEventListener('click', e => {
+        console.log('clicked');
+        save_btn.disabled = false;
+        bQues.disabled = false;
+        fQues.disabled = false;
+    });
+});
+
+save_btn.addEventListener('click', e => {
+    console.log('save btn clicked');
+});
+
 
 bQues.addEventListener('click', e => {
     
