@@ -125,9 +125,9 @@ function validateForm() {
 
         favLagValue = favlang.options[favlang.selectedIndex].value;
         console.log(favLagValue);
-        if(favLagValue == ''){
-            document.getElementById('err-fav').style.display = 'inherit';        
-        }else{
+        if (favLagValue == '') {
+            document.getElementById('err-fav').style.display = 'inherit';
+        } else {
             document.getElementById('err-fav').style.display = 'none';
         }
 
@@ -137,8 +137,8 @@ function validateForm() {
 document.getElementById('quizz-choice').addEventListener('click', e => {
     let x = document.getElementById('quizz-choice').options[document.getElementById('quizz-choice').selectedIndex].value;
     console.log(x);
-    
-    if(x != '') document.getElementById('q-topic').innerText = x+' Quizz';
+
+    if (x != '') document.getElementById('q-topic').innerText = x + ' Quizz';
 });
 
 subtn.addEventListener('click', e => {
@@ -278,7 +278,7 @@ function valueAssignment() {
 
 function setInterval() {
     setTimeout(() => {
-        forwardquestion();        
+        forwardquestion();
     }, 60000);
 }
 
@@ -349,4 +349,123 @@ btn_submit_test.addEventListener('click', e => {
     document.getElementById('noofq').innerText = questionArr.length;
     document.getElementById('score').innerText = marks + 1;
 });
+
+
+
+
+
+
+const QuizzQuestions = [
+    [
+        'General',
+        [
+            'Grand Central Terminal, Park Avenue, New York is the worlds',
+            'Entomology is the science that studies',
+            'Eritrea, which became the 182nd member of the UN in 1993, is in the continent of',
+            'Garampani sanctuary is located at',
+            'For which of the following disciplines is Nobel Prize awarded?',
+            'Hitler party which came into power in 1933 is known as',
+        ],
+        [
+            [ 'largest railway station', 'highest railway station', 'longest railway station', 'None of the above' ],
+            [ 'Behavior of human beings', 'Insects', 'The origin and history of technical and scientific terms', 'The formation of rocks' ],
+            [ 'Asia', 'Africa', 'Europe', 'Australia' ],
+            [ 'Junagarh, Gujarat', 'Diphu, Assam', 'Kohima, Nagaland', 'Gangtok, Sikkim' ],
+            [ 'Physics and Chemistry', 'Physiology or Medicine', 'Literature, Peace and Economics', 'All of the above' ],
+            [ 'Labour Party', 'Nazi Party', 'Ku-Klux-Klan', 'Democratic Party']
+        ],
+        [
+            'largest railway station', 'Insects', 'Africa', 'Diphu, Assam', 'Nazi Party'
+        ]
+    ],
+    [
+        'History',
+        [
+            'The Indus Valley Civilization was famous for?',
+            'The last king of Mauryan empire was?',
+            'What was the name of the Hall of Worship constructed by Akbar?',
+            'Amongst the following, who cooperated with Raja Ram Mohan Roy in the implementation of his educational programmes?',
+            'Which is the oldest stock exchange in Asia ?',
+            'Of the five vows (Panch Anuvratas) of Jainism, four existed before Mahavira. The one which he added was:',
+            'Project Tiger was introduced in',
+            'The last in succession of Jaina Tirthankaras was?',
+            'The Indus or Harappan Civilisation is distinguished from the other contemporary civilisations by its:',
+            'Who usurped power from the Mauryas after killing the last Mauryan ruler Brihadratha?'
+        ],
+        [
+            ['Well-planned cities', 'Efficient civil organization', 'Development of Art and Architecture', 'All of these'],
+            ['Shalishuk', 'Kunala', 'Devavarman', 'Brihadratha'],
+            ['Diwan-e-Khas', 'Diwan-e-Aam', 'Ibadat Khana', 'Buland Darwaza'],
+            ['Henri Derozio', 'William Jones', 'David Hare', 'Dwarkanath Tagore'],
+            ['Bombay Stock Exchange', 'Shanghai Stock Exchange', 'Hong Kong Stock Exchang', 'Tokyo Stock Exchange'],
+            ['not to kill (non-injury)', 'not to steal', 'non-attachment to worldly things', 'celibacy'],
+            ['2001', '1973', '1984', '1995'],
+            ['Mahavira', 'Rishaba', 'Parsvanatha', 'Manisubrata'],
+            ['town planning', 'underground drainage system', 'uniformity of weights and measures', 'large agricultural surplus'],
+            ['Pushyamitra Sunga', 'Agnimitra', 'Vasumitra', 'Harshavardhana']
+        ],
+        [
+            'David Hare', 'celibacy', '1973', 'underground drainage system', 'All of these', 'Mahavira', 'Brihadratha', 'Ibadat Khana', 'Bombay Stock Exchange', 'Pushyamitra Sunga'
+        ]
+    ],
+    [
+        'Technical',
+        [
+            'What was the first emoticon ever used?',
+            'What technology is used to record cryptocurrency transactions?',
+            'What tool would you use to reduce the digital image size?',
+            'Why is Big Data important?',
+            'What kind of malware is designed to take advantage of a security hole before it is known?',
+            'Making a compressed digital archive might produce what type of file format?',
+            'What does acronym FOSS stand for?',
+            'What technology is used to make telephone calls over the Internet possible?',
+            'What is the term for text that automatically continues from one line to the next?',
+            'What does it mean to uncloud?',
+            'Which computer language is the most widely used?',
+            'Approximately, how much data exists in the digital universe today?',
+            'Which tech buzzword is closely related to Artificial Intelligence (AI)?',
+            'Which of the following is an important step towards the paperless concept?',
+            'What was the first cross-platform PDF software?'
+        ],
+        [
+            ['smile', 'laugh', 'sad', 'angry'],
+            ['Digital wallet', 'Mining', 'BlockChain', 'Token'],
+            ['Filter', 'Brush', 'Rotate', 'Crop'],
+            ['Because it is structured', 'Because it may be analyzed to reveal patterns and trends', 'Because of its complexity', 'Because of its size'],
+            ['Zero-day exploit', 'Virus', 'Ransonware', 'Trojan horse'],
+            ['PDF', 'JPEG', 'ZIP', 'MP3'],
+            ['Free and Open-Source Software', 'Full Option Sensor System', 'Follow-On Support Service', 'Fiber Optics Science System'],
+            ['Bluetooth', 'Ethernet', 'NFC', 'VoIP'],
+            ['Word processing', 'Word wrapping', 'Word flowing', 'Word binding'],
+            ['Organize cloud storage', 'Remove all files from the cloud', 'Print a file from the cloud', 'Delete a cloud service account'],
+            ['C#', 'Swift', 'PHP', 'Java'],
+            ['2.7 megabytes', '2.7 gigabytes', '2.7 zetabytes', '2.7 terabytes'],
+            ['Virtual reality', 'Machine learning', 'Cryptocurrency', 'Microservices'],
+            ['Doxing', 'Digitizing', 'Debugging', 'Downloading'],
+            ['Adobe Acrobat', 'Foxit PhantomPDF', 'Nitro Pro', 'Able2Extract Professional']
+        ],
+        [
+            'smile', 'BlockChain', 'Crop', 'Because it may be analyzed to reveal patterns and trends', 'Zero-day exploit', 'ZIP', 'Free and Open-Source Software', 'VoIP', 'Word wrapping', 'Organize cloud storage', 'Java', '2.7 zetabytes', 'Machine learning', 'Digitizing', 'Able2Extract Professional'
+        ]
+    ]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
