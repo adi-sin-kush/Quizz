@@ -306,3 +306,14 @@ span{
     display: none;
 }
 
+.page-title-c1{
+    // background: lightblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #quizz-choice{
+        width: 115px;
+        padding: 8px;
+    }
+}

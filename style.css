@@ -335,4 +335,21 @@ span {
   color: red;
   display: none;
 }
+
+.page-title-c1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-title-c1 #quizz-choice {
+  width: 115px;
+  padding: 8px;
+}
 /*# sourceMappingURL=style.css.map */

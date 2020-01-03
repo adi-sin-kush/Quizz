@@ -134,7 +134,12 @@ function validateForm() {
     })
 }
 
-
+document.getElementById('quizz-choice').addEventListener('click', e => {
+    let x = document.getElementById('quizz-choice').options[document.getElementById('quizz-choice').selectedIndex].value;
+    console.log(x);
+    
+    if(x != '') document.getElementById('q-topic').innerText = x+' Quizz';
+});
 
 subtn.addEventListener('click', e => {
     e.preventDefault();
