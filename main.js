@@ -152,6 +152,7 @@ subtn.addEventListener('click', e => {
         user = new User(fname.value, email.value, genderValue, favLagValue);
         regform.style.display = "none";
         cardy.style.display = "flex";
+        setIntial();
     }
 });
 
@@ -270,13 +271,19 @@ function valueAssignment() {
     D_option_value.innerText = answerArr[qnumber][3];
 }
 
+function setInterval() {
+    setTimeout(() => {
+        forwardquestion();        
+    }, 60000);
+}
+
 function setIntial() {
     qnumber++;
     questionNo.innerText = (qnumber + 1 + `.`);
     questions.innerText = questionArr[qnumber];
 
     valueAssignment();
-
+    setInterval();
     userAnswerIndex++;
 }
 
@@ -304,7 +311,7 @@ function forwardquestion() {
         save_btn.style.cursor = 'not-allowed';
         // bQues.style.cursor = 'not-allowed';
         // fQues.style.cursor = 'not-allowed';
-
+        setInterval();
         userAnswerIndex++;
     }
 
@@ -335,6 +342,6 @@ btn_submit_test.addEventListener('click', e => {
     result_panel.style.display = 'block';
     document.getElementById('username').innerText = user.fname;
     document.getElementById('noofq').innerText = questionArr.length;
-    document.getElementById('score').innerText = marks;
+    document.getElementById('score').innerText = marks + 1;
 });
 
